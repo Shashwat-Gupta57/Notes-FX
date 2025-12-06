@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.flexstudios.notepad.dialogs.FindReplaceDialogController" spacing="10.0">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Find what:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="findTextField" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Replace with:" visible="false" fx:id="replaceLabel" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField visible="false" fx:id="replaceTextField" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <VBox spacing="5.0" fx:id="optionsBox">
+        <CheckBox fx:id="matchCaseCheckBox" text="Match case"/>
+        <CheckBox fx:id="wrapAroundCheckBox" selected="true" text="Wrap around"/>
+    </VBox>
+
+    <VBox spacing="5.0" fx:id="directionBox">
+        <Label text="Direction"/>
+        <HBox spacing="20.0">
+            <RadioButton fx:id="upRadioButton" text="Up"/>
+            <RadioButton fx:id="downRadioButton" selected="true" text="Down"/>
+            <ToggleGroup fx:id="directionToggleGroup"/>
+        </HBox>
+    </VBox>
+
+    <HBox spacing="10.0" fx:id="buttonsBox" alignment="CENTER_RIGHT">
+        <Button fx:id="findNextButton" text="Find Next" onAction="#onFindNext"/>
+        <Button fx:id="replaceButton" visible="false" text="Replace" onAction="#onReplace"/>
+        <Button fx:id="replaceAllButton" visible="false" text="Replace All" onAction="#onReplaceAll"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#onCancel"/>
+    </HBox>
+</VBox>

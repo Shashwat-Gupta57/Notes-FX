@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.flexstudios.notepad.dialogs.GoToDialogController" hgap="10.0" vgap="20.0">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+
+    <Label text="Line number:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label fx:id="lineRangeLabel" text="Line number (1 to 100):" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <TextField fx:id="lineNumberTextField" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button fx:id="okButton" text="OK" onAction="#onOK"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#onCancel"/>
+    </HBox>
+</GridPane>

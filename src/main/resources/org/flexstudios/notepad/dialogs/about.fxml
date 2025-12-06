@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.flexstudios.notepad.dialogs.AboutDialogController" spacing="10.0" alignment="CENTER">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Windows Notepad Clone" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <Label text="Version 1.0"/>
+    <Separator/>
+    <Label text="A JavaFX implementation of Windows Notepad" textAlignment="CENTER"/>
+    <Label text="Built with Java and JavaFX" textAlignment="CENTER"/>
+    <Separator/>
+    <Label text="Features:" style="-fx-font-weight: bold;"/>
+    <Label text="• Complete file operations (New, Open, Save, Save As)" textAlignment="CENTER"/>
+    <Label text="• Full text editing with undo/redo" textAlignment="CENTER"/>
+    <Label text="• Find and replace functionality" textAlignment="CENTER"/>
+    <Label text="• Go to line navigation" textAlignment="CENTER"/>
+    <Label text="• Font selection and zoom controls" textAlignment="CENTER"/>
+    <Label text="• Word wrap and status bar" textAlignment="CENTER"/>
+    <Separator/>
+    <Label text="© 2025 - JavaFX Notepad Implementation" textAlignment="CENTER"/>
+
+    <Button fx:id="okButton" text="OK" onAction="#onOK"/>
+</VBox>

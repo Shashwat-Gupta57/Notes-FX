@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.flexstudios.notepad.dialogs.FontDialogController" hgap="15.0" vgap="10.0">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+
+    <Label text="Font:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label text="Font style:" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Size:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+    <ListView fx:id="fontFamilyListView" prefHeight="200.0" prefWidth="150.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.rowSpan="4"/>
+
+    <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <CheckBox fx:id="boldCheckBox" text="Bold"/>
+        <CheckBox fx:id="italicCheckBox" text="Italic"/>
+    </VBox>
+
+    <ListView fx:id="fontSizeListView" prefHeight="200.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="4"/>
+
+    <Label text="Preview:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <TextArea fx:id="previewTextArea" prefHeight="100.0" prefWidth="400.0" text="The quick brown fox jumps over the lazy dog." wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="6"/>
+
+    <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="7">
+        <Button fx:id="okButton" text="OK" onAction="#onOK"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#onCancel"/>
+    </HBox>
+</GridPane>
